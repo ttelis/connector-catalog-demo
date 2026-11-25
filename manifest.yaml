@@ -1,0 +1,144 @@
+# Test manifest for the connector catalog (V9-70). Not a real marketplace.
+# Schema 1.0 (Confluence page 2016706579). Builds point at the public
+# radiantlogicinc/connector-marketplace JARs by full URL, with their real SHA-256.
+# The statuses below are made up to exercise each case; they are not real release decisions.
+schemaVersion: "1.0"
+connectors:
+
+  # Installed 1.0.1 is active; 1.0.0 is deprecated, so it is not offered and shows no warning.
+  - id: agentic-aws-bedrock
+    name: "AWS Bedrock"
+    kind: sdk
+    description: "Agentic connector for AWS Bedrock agents."
+    dataSourceType: custom
+    releases:
+      - version: "1.0.1"
+        status: active
+        buildPath: https://raw.githubusercontent.com/radiantlogicinc/connector-marketplace/main/agentic-aws-bedrock/builds/aws-bedrock-connector-1.0.1.jar
+        sha256: 4e32ead47b365f9041735c0e0acf64809543e1f377c1b857636b6b88cecff21c
+        minimumVersions:
+          iddm: "8.1.0"
+        readme: https://github.com/radiantlogicinc/connector-marketplace/blob/main/agentic-aws-bedrock/readme.md
+      - version: "1.0.0"
+        status: deprecated
+        buildPath: https://raw.githubusercontent.com/radiantlogicinc/connector-marketplace/main/agentic-aws-bedrock/builds/aws-bedrock-connector-1.0.0.jar
+        sha256: 4278b38cf4a7de35fc9ae46179cadef61a8c86160b55be258a147c92bcf1ae51
+        minimumVersions:
+          iddm: "8.1.0"
+        readme: https://github.com/radiantlogicinc/connector-marketplace/blob/main/agentic-aws-bedrock/readme.md
+
+  # Mixed statuses: only 0.9.4 is offered for install.
+  - id: google-cloud-agents
+    name: "Google Cloud Agents"
+    kind: sdk
+    description: "Agentic connector for Google Cloud agents."
+    dataSourceType: custom
+    releases:
+      - version: "0.9.4"
+        status: active
+        buildPath: https://raw.githubusercontent.com/radiantlogicinc/connector-marketplace/main/google-cloud-agents/builds/google-cloud-agents-connector-0.9.4.jar
+        sha256: 27e97dfea4698a8d16542946d6abd43fc2cde8ae4c2f601a9f6bc0b086545466
+        minimumVersions:
+          iddm: "8.1.0"
+        readme: https://github.com/radiantlogicinc/connector-marketplace/blob/main/google-cloud-agents/readme.md
+      - version: "0.9.3"
+        status: deprecated
+        buildPath: https://raw.githubusercontent.com/radiantlogicinc/connector-marketplace/main/google-cloud-agents/builds/google-cloud-agents-connector-0.9.3.jar
+        sha256: 1ddc049ab98d5f790abc6ce2d48b59fea05de9074064c0791f146a1a725a09ec
+        minimumVersions:
+          iddm: "8.1.0"
+        readme: https://github.com/radiantlogicinc/connector-marketplace/blob/main/google-cloud-agents/readme.md
+      - version: "0.9.2"
+        status: withdrawn
+        buildPath: https://raw.githubusercontent.com/radiantlogicinc/connector-marketplace/main/google-cloud-agents/builds/google-cloud-agents-connector-0.9.2.jar
+        sha256: 7150d77ff60482bb7d06a68ca07eebeb854f2c6f7f9c8b5aba54737fd42b6cef
+        minimumVersions:
+          iddm: "8.1.0"
+        readme: https://github.com/radiantlogicinc/connector-marketplace/blob/main/google-cloud-agents/readme.md
+
+  # Every release withdrawn: no active release. The installed 0.9.2 Template shows the withdrawn warning; the connector is not offered for new installs.
+  - id: microsoft-azure-ai-foundry
+    name: "Microsoft Azure AI Foundry"
+    kind: sdk
+    description: "Agentic connector for Microsoft Azure AI Foundry."
+    dataSourceType: custom
+    releases:
+      - version: "0.9.2"
+        status: withdrawn
+        buildPath: https://raw.githubusercontent.com/radiantlogicinc/connector-marketplace/main/microsoft-azure-ai-foundry/builds/microsoft-azure-ai-foundry-connector-0.9.2.jar
+        sha256: 45ac6aa2c2d9fdadf65e42ae345fdb7af543ef91e0e369d66a37f4fcd08a8a44
+        minimumVersions:
+          iddm: "8.1.0"
+        readme: https://github.com/radiantlogicinc/connector-marketplace/blob/main/microsoft-azure-ai-foundry/readme.md
+
+  # Only a deprecated release: no active release, no warning on the installed Template, not offered for new installs.
+  - id: servicenow
+    name: "ServiceNow"
+    kind: sdk
+    description: "Connector for ServiceNow."
+    dataSourceType: custom
+    releases:
+      - version: "1.0.0"
+        status: deprecated
+        buildPath: https://raw.githubusercontent.com/radiantlogicinc/connector-marketplace/main/servicenow/builds/servicenow-connector-1.0.0.jar
+        sha256: d002d92eef95b326ccb824f4841ebe225b222aec8e087218b8769cfbfa4592a7
+        minimumVersions:
+          iddm: "8.1.0"
+        readme: https://github.com/radiantlogicinc/connector-marketplace/blob/main/servicenow/readme.md
+
+  - id: cyberark-privilege-cloud
+    name: "CyberArk Privilege Cloud"
+    kind: sdk
+    description: "Connector for CyberArk Privilege Cloud."
+    dataSourceType: custom
+    releases:
+      - version: "1.0.0"
+        status: active
+        buildPath: https://raw.githubusercontent.com/radiantlogicinc/connector-marketplace/main/cyberark-privilege-cloud/builds/CyberArk_Privilege_Cloud_Connector_v1.0.0.jar
+        sha256: 6292053ad6641d5fd0c17495ce5d9faa2ecaca53d92968e6e374b64f307c060c
+        minimumVersions:
+          iddm: "8.1.0"
+        readme: https://github.com/radiantlogicinc/connector-marketplace/blob/main/cyberark-privilege-cloud/readme.md
+
+  - id: okta-sdk
+    name: "Okta"
+    kind: sdk
+    description: "Connector for Okta."
+    dataSourceType: custom
+    releases:
+      - version: "1.0.0"
+        status: active
+        buildPath: https://raw.githubusercontent.com/radiantlogicinc/connector-marketplace/main/okta-sdk/builds/okta-connector-1.0.0.jar
+        sha256: de7f38ec22f42e875fe7504a6d09f86545fa5487442815a6b5f681c75aacb9b5
+        minimumVersions:
+          iddm: "8.1.0"
+        readme: https://github.com/radiantlogicinc/connector-marketplace/blob/main/okta-sdk/readme.md
+
+  - id: sailpoint-identity-security-cloud
+    name: "SailPoint Identity Security Cloud"
+    kind: sdk
+    description: "Connector for SailPoint Identity Security Cloud."
+    dataSourceType: custom
+    releases:
+      - version: "1.0.1"
+        status: active
+        buildPath: https://raw.githubusercontent.com/radiantlogicinc/connector-marketplace/main/sailpoint-identity-security-cloud/builds/sailpoint-isc-v3-connector-1.0.1.jar
+        sha256: 08664c0f1f53dae8e96a5813debfc8401ef027cddaf638dad4648d8a9267ba34
+        minimumVersions:
+          iddm: "8.1.0"
+        readme: https://github.com/radiantlogicinc/connector-marketplace/blob/main/sailpoint-identity-security-cloud/readme.md
+
+  # Test only: typed jdbc so the Database filter has an entry. The real Workday connector is not a database.
+  - id: workday
+    name: "Workday"
+    kind: sdk
+    description: "Connector for Workday. Typed jdbc here only so the catalog's Database filter has an entry to show."
+    dataSourceType: jdbc
+    releases:
+      - version: "1.0.0"
+        status: active
+        buildPath: https://raw.githubusercontent.com/radiantlogicinc/connector-marketplace/main/workday/builds/workday-connector-1.0.0.jar
+        sha256: 8b6333b7a6b574fbb6747b73ededb9772b3d3c7e9a6c8d82cf67c62b7da6ed36
+        minimumVersions:
+          iddm: "8.1.0"
+        readme: https://github.com/radiantlogicinc/connector-marketplace/blob/main/workday/readme.md
