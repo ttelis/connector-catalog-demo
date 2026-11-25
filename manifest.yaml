@@ -5,22 +5,15 @@
 schemaVersion: "1.0"
 connectors:
 
-  # Installed 1.0.1 is active; 1.0.0 is deprecated, so it is not offered and shows no warning.
+  # Update test, step 1: 1.0.0 is the only release, so the catalog installs it. Step 2 adds 1.0.1 back.
   - id: agentic-aws-bedrock
     name: "AWS Bedrock"
     kind: sdk
     description: "Agentic connector for AWS Bedrock agents."
     dataSourceType: custom
     releases:
-      - version: "1.0.1"
-        status: active
-        buildPath: https://raw.githubusercontent.com/radiantlogicinc/connector-marketplace/main/agentic-aws-bedrock/builds/aws-bedrock-connector-1.0.1.jar
-        sha256: 4e32ead47b365f9041735c0e0acf64809543e1f377c1b857636b6b88cecff21c
-        minimumVersions:
-          iddm: "8.1.0"
-        readme: https://github.com/radiantlogicinc/connector-marketplace/blob/main/agentic-aws-bedrock/readme.md
       - version: "1.0.0"
-        status: deprecated
+        status: active
         buildPath: https://raw.githubusercontent.com/radiantlogicinc/connector-marketplace/main/agentic-aws-bedrock/builds/aws-bedrock-connector-1.0.0.jar
         sha256: 4278b38cf4a7de35fc9ae46179cadef61a8c86160b55be258a147c92bcf1ae51
         minimumVersions:
