@@ -131,13 +131,13 @@ connectors:
         readme: https://github.com/radiantlogicinc/connector-marketplace/blob/main/sailpoint-identity-security-cloud/readme.md
 
   # Test only: typed jdbc so the Database filter has an entry. The real Workday connector is not a database.
-  # Also listed as a replacement for Google Cloud Agents, which it does not fit, to see the reason for a refused switch.
+  # Also listed as a replacement for AWS Bedrock, which it does not fit, to see the reason for a refused switch.
   - id: workday
     name: "Workday"
     kind: sdk
     description: "Connector for Workday. Typed jdbc here only so the catalog's Database filter has an entry to show."
     dataSourceType: jdbc
-    replaces: [google-cloud-agents]
+    replaces: [agentic-aws-bedrock]
     releases:
       - version: "1.0.0"
         status: active
