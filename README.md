@@ -15,6 +15,8 @@ decisions:
 | Google Cloud Agents | 0.9.4 active, 0.9.3 deprecated, 0.9.2 withdrawn | Only active builds are offered |
 | AWS Bedrock | 1.0.1 active, 1.0.0 deprecated | Deprecated build is not offered |
 | Workday | 1.0.0 active, typed `jdbc` | The Database filter has an entry |
+| Okta | `replaces: [servicenow]` | Edit connector offers it for a Template that runs ServiceNow |
+| Workday | `replaces: [google-cloud-agents]` | A listed replacement that does not fit, to see the reason for the refusal |
 
 To use it, set the data catalog service's `catalog.url` to this repository's URL.
 `catalog.manifest_location` stays `manifest.yaml`.

@@ -100,11 +100,13 @@ connectors:
           iddm: "8.1.0"
         readme: https://github.com/radiantlogicinc/connector-marketplace/blob/main/cyberark-privilege-cloud/readme.md
 
+  # Test only: listed as a replacement for ServiceNow, so Edit connector offers it for a Template that runs ServiceNow.
   - id: okta-sdk
     name: "Okta"
     kind: sdk
     description: "Connector for Okta."
     dataSourceType: custom
+    replaces: [servicenow]
     releases:
       - version: "1.0.0"
         status: active
@@ -129,11 +131,13 @@ connectors:
         readme: https://github.com/radiantlogicinc/connector-marketplace/blob/main/sailpoint-identity-security-cloud/readme.md
 
   # Test only: typed jdbc so the Database filter has an entry. The real Workday connector is not a database.
+  # Also listed as a replacement for Google Cloud Agents, which it does not fit, to see the reason for a refused switch.
   - id: workday
     name: "Workday"
     kind: sdk
     description: "Connector for Workday. Typed jdbc here only so the catalog's Database filter has an entry to show."
     dataSourceType: jdbc
+    replaces: [google-cloud-agents]
     releases:
       - version: "1.0.0"
         status: active
