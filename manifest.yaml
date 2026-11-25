@@ -86,6 +86,7 @@ connectors:
           iddm: "8.1.0"
         readme: https://github.com/radiantlogicinc/connector-marketplace/blob/main/servicenow/readme.md
 
+  # Error-state test: this build asks for a product version no installation has.
   - id: cyberark-privilege-cloud
     name: "CyberArk Privilege Cloud"
     kind: sdk
@@ -97,7 +98,7 @@ connectors:
         buildPath: https://raw.githubusercontent.com/radiantlogicinc/connector-marketplace/main/cyberark-privilege-cloud/builds/CyberArk_Privilege_Cloud_Connector_v1.0.0.jar
         sha256: 6292053ad6641d5fd0c17495ce5d9faa2ecaca53d92968e6e374b64f307c060c
         minimumVersions:
-          iddm: "8.1.0"
+          iddm: "99.0.0"
         readme: https://github.com/radiantlogicinc/connector-marketplace/blob/main/cyberark-privilege-cloud/readme.md
 
   # Test only: listed as a replacement for ServiceNow, so Edit connector offers it for a Template that runs ServiceNow.
@@ -116,16 +117,24 @@ connectors:
           iddm: "8.1.0"
         readme: https://github.com/radiantlogicinc/connector-marketplace/blob/main/okta-sdk/readme.md
 
+  # Error-state test: 1.0.2 points at a file that does not exist, and 1.0.1 has a wrong checksum.
   - id: sailpoint-identity-security-cloud
     name: "SailPoint Identity Security Cloud"
     kind: sdk
     description: "Connector for SailPoint Identity Security Cloud."
     dataSourceType: custom
     releases:
+      - version: "1.0.2"
+        status: active
+        buildPath: https://raw.githubusercontent.com/radiantlogicinc/connector-marketplace/main/sailpoint-identity-security-cloud/builds/sailpoint-isc-v3-connector-1.0.2.jar
+        sha256: 1111111111111111111111111111111111111111111111111111111111111111
+        minimumVersions:
+          iddm: "8.1.0"
+        readme: https://github.com/radiantlogicinc/connector-marketplace/blob/main/sailpoint-identity-security-cloud/readme.md
       - version: "1.0.1"
         status: active
         buildPath: https://raw.githubusercontent.com/radiantlogicinc/connector-marketplace/main/sailpoint-identity-security-cloud/builds/sailpoint-isc-v3-connector-1.0.1.jar
-        sha256: 08664c0f1f53dae8e96a5813debfc8401ef027cddaf638dad4648d8a9267ba34
+        sha256: 08664c0f1f53dae8e96a5813debfc8401ef027cddaf638dad4648d8a9267ba35
         minimumVersions:
           iddm: "8.1.0"
         readme: https://github.com/radiantlogicinc/connector-marketplace/blob/main/sailpoint-identity-security-cloud/readme.md
